@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine.UIElements;
 
-
 public class SimpleDropForObjects<TObj> : VisualElement
 {
   public event EventHandler<TObj> onSelectObj;
 
   private readonly DropdownField df;
+  protected readonly VisualElement paramRoot;
+
   private Dictionary<string, TObj> _values;
 
   public SimpleDropForObjects()
@@ -16,9 +17,23 @@ public class SimpleDropForObjects<TObj> : VisualElement
     df = CreateField;
     df.RegisterValueChangedCallback(Callback);
     Add(df);
+
+    onSelectObj += (sender, obj) => SetValue(obj);
+    paramRoot = new VisualElement();
+    Add(paramRoot);
   }
 
-  public void SetValue(TObj obj)
+  protected virtual TObj ProcessObjParams(TObj @object)
+  {
+    return @object;
+  }
+  
+  protected virtual string FormatName(TObj obj)
+  {
+    return obj.ToString();
+  }
+
+  public virtual void SetValue(TObj obj)
   {
     if (obj == null) return;
 
@@ -54,8 +69,4 @@ public class SimpleDropForObjects<TObj> : VisualElement
       onSelectObj?.Invoke(this, obj);
   }
 
-  protected virtual string FormatName(TObj obj)
-  {
-    return obj.ToString();
-  }
 }
