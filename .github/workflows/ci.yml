@@ -35,7 +35,7 @@ jobs:
         fi
         git push -f -u origin upm
       env:
-        PKG_ROOT: Packages/com.haithere.tools.uikits
+        PKG_ROOT: haithere-uikits/Packages/com.haithere.tools.uikits
     - name: Create upm git tag
       if: steps.semantic.outputs.new_release_published == 'true'
       run: |
