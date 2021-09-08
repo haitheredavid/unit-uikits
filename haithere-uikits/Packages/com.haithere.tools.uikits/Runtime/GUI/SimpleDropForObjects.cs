@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine.UIElements;
 
+using DropField = UnityEngine.UIElements.DropdownField;
+
 public class SimpleDropForObjects<TObj> : VisualElement
 {
   public event EventHandler<TObj> onSelectObj;
 
-  private readonly DropdownField df;
+  private readonly DropField df;
   protected readonly VisualElement paramRoot;
 
   private Dictionary<string, TObj> _values;
@@ -51,7 +53,7 @@ public class SimpleDropForObjects<TObj> : VisualElement
     }
   }
 
-  private DropdownField CreateField
+  private DropField CreateField
   {
     get
     {
@@ -59,7 +61,7 @@ public class SimpleDropForObjects<TObj> : VisualElement
       foreach (var obj in ReflectionHelper.FindType<TObj>())
         _values[FormatName(obj)] = obj;
 
-      return new DropdownField(_values.Keys.ToList(), 0);
+      return new DropField(_values.Keys.ToList(), 0);
     }
   }
 
