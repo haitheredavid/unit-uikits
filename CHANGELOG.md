@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/haitheredavid/unity-uikits/compare/v1.0.1...v1.0.2) (2021-09-08)
+
+
+### Bug Fixes
+
+* added meta files ([6439f8d](https://github.com/haitheredavid/unity-uikits/commit/6439f8d1f00c526a1b14ce5fb8fbb1bc76472a4b))
+
 ## [1.0.1](https://github.com/haitheredavid/unity-uikits/compare/v1.0.0...v1.0.1) (2021-09-08)
 
 
