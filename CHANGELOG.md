@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/haitheredavid/unity-uikits/compare/v1.0.3...v1.0.4) (2021-09-09)
+
+
+### Bug Fixes
+
+* Moved to 2021 ([c09184e](https://github.com/haitheredavid/unity-uikits/commit/c09184e49639938efce2139f5345510fdcea6e6c))
+
 ## [1.0.3](https://github.com/haitheredavid/unity-uikits/compare/v1.0.2...v1.0.3) (2021-09-09)
 
 
