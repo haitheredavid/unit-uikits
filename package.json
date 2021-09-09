@@ -1,9 +1,9 @@
 {
   "name": "com.haithere.tools.uikits",
   "version": "1.0.3",
-  "displayName": "haithere-UI Kits",
+  "displayName": "haithere-Ui-Kits",
   "type": "tool",
-  "unity": "2020.3",
+  "unity": "2021.1",
   "description": "A small set of UI elements",
   "dependencies": {
     "com.unity.ui": "1.0.0-preview.17"
