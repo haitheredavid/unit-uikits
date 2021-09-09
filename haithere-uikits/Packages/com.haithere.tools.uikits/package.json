@@ -2,6 +2,11 @@
   "name": "com.haithere.tools.uikits",
   "version": "1.0.3",
   "displayName": "haithere-UI Kits",
-  "type": "library",
-  "unity": "2020.3"
+  "type": "tool",
+  "unity": "2020.3",
+  "description": "A small set of UI elements",
+  "dependencies": {
+    "com.unity.ui": "1.0.0-preview.17"
+  },
+  "hideInEditor": false
 }
