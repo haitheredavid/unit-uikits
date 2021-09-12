@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/haitheredavid/unity-uikits/compare/v1.0.4...v1.0.5) (2021-09-12)
+
+
+### Bug Fixes
+
+* reflection can skip base obj ([79d7dcd](https://github.com/haitheredavid/unity-uikits/commit/79d7dcd8bd49a00f7ba0a0a685e295b5b7657c1e))
+
 ## [1.0.4](https://github.com/haitheredavid/unity-uikits/compare/v1.0.3...v1.0.4) (2021-09-09)
 
 
