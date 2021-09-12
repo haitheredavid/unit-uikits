@@ -5,11 +5,15 @@ using UnityEngine.UIElements;
 
 public class SimpleDropForObjects<TObj> : VisualElement
 {
+  protected bool skipBaseObj = true;
+  
   public event EventHandler<TObj> onSelectObj;
+
 
   private readonly DropdownField df;
   protected readonly VisualElement paramRoot;
 
+  
   private Dictionary<string, TObj> _values;
 
   public SimpleDropForObjects()
@@ -57,7 +61,7 @@ public class SimpleDropForObjects<TObj> : VisualElement
     get
     {
       _values = new Dictionary<string, TObj>();
-      foreach (var obj in ReflectionHelper.FindType<TObj>())
+      foreach (var obj in ReflectionHelper.FindType<TObj>(skipBaseObj))
         _values[FormatName(obj)] = obj;
 
       return new DropdownField(_values.Keys.ToList(), 0);

@@ -5,10 +5,10 @@ using System.Reflection;
 
 public static class ReflectionHelper
 {
-  public static IEnumerable<T> FindType<T>(bool addIfRefIsNotAbstract = true)
+  public static IEnumerable<T> FindType<T>(bool skipBaseObj = false)
   {
     var objs = new List<T>();
-    if (addIfRefIsNotAbstract && !typeof(T).IsAbstract)
+    if (!skipBaseObj && !typeof(T).IsAbstract)
       objs.Add((T)Activator.CreateInstance(typeof(T)));
 
     objs.AddRange(Assembly.GetAssembly(typeof(T)).GetTypes()
