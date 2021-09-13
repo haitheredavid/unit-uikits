@@ -2,23 +2,22 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine.UIElements;
+using haithere.toolkit;
 
 public class SimpleDropForObjects<TObj> : VisualElement
 {
   protected bool skipBaseObj = true;
-  
-  public event EventHandler<TObj> onSelectObj;
 
+  public event EventHandler<TObj> onSelectObj;
 
   private readonly DropdownField df;
   protected readonly VisualElement paramRoot;
 
-  
   private Dictionary<string, TObj> _values;
 
   public SimpleDropForObjects()
   {
-    
+
     df = CreateField;
     df.RegisterValueChangedCallback(Callback);
     Add(df);
@@ -28,15 +27,9 @@ public class SimpleDropForObjects<TObj> : VisualElement
     Add(paramRoot);
   }
 
-  protected virtual TObj ProcessObjParams(TObj @object)
-  {
-    return @object;
-  }
-  
-  protected virtual string FormatName(TObj obj)
-  {
-    return obj.ToString();
-  }
+  protected virtual TObj ProcessObjParams(TObj @object) => @object;
+
+  protected virtual string FormatName(TObj obj) => obj.ToString();
 
   public virtual void SetValue(TObj obj)
   {
@@ -45,15 +38,15 @@ public class SimpleDropForObjects<TObj> : VisualElement
     var index = 0;
     var input = FormatName(obj);
     foreach (var k in _values.Keys)
-    {
       if (!k.Equals(input))
+      {
         index++;
+      }
       else
       {
         df.index = index;
         break;
       }
-    }
   }
 
   private DropdownField CreateField

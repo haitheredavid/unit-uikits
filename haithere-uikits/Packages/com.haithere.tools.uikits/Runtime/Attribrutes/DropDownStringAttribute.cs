@@ -1,7 +1,6 @@
 using System;
 using UnityEngine;
 
-
 namespace haithere.toolkit
 {
   [AttributeUsage(AttributeTargets.Field)]
@@ -9,10 +8,7 @@ namespace haithere.toolkit
   {
     public string Name { get; }
 
-    public DropDownStringAttribute(string value)
-    {
-      Name = value;
-    }
+    public DropDownStringAttribute(string value) => Name = value;
   }
 
 }

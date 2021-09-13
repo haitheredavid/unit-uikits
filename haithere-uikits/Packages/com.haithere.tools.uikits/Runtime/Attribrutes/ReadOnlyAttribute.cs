@@ -1,7 +1,8 @@
-#if UNITY_EDITOR
 using UnityEngine;
 
-public class ReadOnlyAttribute : PropertyAttribute
-{ }
+namespace haithere.toolkit
+{
+  public class ReadOnlyAttribute : PropertyAttribute
+  { }
 
-#endif
+}
