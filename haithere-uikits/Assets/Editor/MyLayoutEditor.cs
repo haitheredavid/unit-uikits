@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.UIElements;
 
 [CustomEditor(typeof(MyLayout))]
-public class MyLayoutEditor : UnityEditor.Editor
+public class MyLayoutEditor : Editor
 {
 
   public override VisualElement CreateInspectorGUI()
