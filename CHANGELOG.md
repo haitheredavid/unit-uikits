@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/haitheredavid/unity-uikits/compare/v1.0.6...v1.1.0) (2021-11-11)
+
+
+### Features
+
+* upgraded uitoolkits 18 ([965226a](https://github.com/haitheredavid/unity-uikits/commit/965226aa5172651b44623990cdbc71d9315c5572))
+
 ## [1.0.6](https://github.com/haitheredavid/unity-uikits/compare/v1.0.5...v1.0.6) (2021-09-13)
 
 
