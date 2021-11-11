@@ -1,0 +1,18 @@
+{
+    "name": "haithere.tools.uikits.editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:41a0fcecf8ef4708b69c613651e69777"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
